@@ -9,7 +9,7 @@ The same filter is applied in two different ways:
 - Spatial domain convolution
 - Fourier domain multiplication
 
-The purpose of the experiment is to show that convolution in the spatial domain gives the same result as multiplication in the Fourier domain.
+The goal is to show that convolution in the spatial domain produces the same result as multiplication in the Fourier domain.
 
 ## How it works
 
@@ -27,9 +27,44 @@ The program then:
 
 The difference between the two results should be very close to zero.
 
+## Convolution Theorem
+
+In the spatial domain:
+
+g(x,y) = f(x,y) * h(x,y)
+
+In the Fourier domain:
+
+G(u,v) = F(u,v)H(u,v)
+
+This shows that convolution in the spatial domain is equivalent to multiplication in the Fourier domain.
+
 ## Run the program
 
 Install the required packages:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Run the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+## Files
+
+- `app.py` - main Python and Streamlit application
+- `requirements.txt` - Python packages required to run the project
+- `README.md` - project description and instructions
+
+## Web Application
+
+The deployed application can be accessed here:
+
+https://csc8830-module3-image-blurring-jshaur3ekyrebw9tuvvfhb.streamlit.app/
+
+## GitHub Repository
+
+https://github.com/cherisha2003/CSC8830-Module3-Image-Blurring
