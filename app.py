@@ -100,7 +100,7 @@ if uploaded_file is not None:
         st.write("Original")
         st.image(
             gray,
-            use_container_width=True
+            width="stretch"
         )
 
     with col2:
@@ -111,7 +111,7 @@ if uploaded_file is not None:
                 0,
                 255
             ).astype(np.uint8),
-            use_container_width=True
+            width="stretch"
         )
 
     with col3:
@@ -122,7 +122,7 @@ if uploaded_file is not None:
                 0,
                 255
             ).astype(np.uint8),
-            use_container_width=True
+            width="stretch"
         )
 
     st.subheader("Difference Image")
@@ -133,7 +133,7 @@ if uploaded_file is not None:
             0,
             255
         ).astype(np.uint8),
-        use_container_width=True
+        width="stretch"
     )
 
     st.subheader("Comparison")
@@ -147,17 +147,13 @@ if uploaded_file is not None:
 
     st.subheader("Convolution Theorem")
 
-    st.write(
-        "Spatial domain:"
-    )
+    st.write("Spatial domain:")
 
     st.latex(
         r"g(x,y) = f(x,y) * h(x,y)"
     )
 
-    st.write(
-        "Fourier domain:"
-    )
+    st.write("Fourier domain:")
 
     st.latex(
         r"G(u,v) = F(u,v)H(u,v)"
